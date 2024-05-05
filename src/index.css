@@ -1,0 +1,7 @@
+.nav-link.active:hover {
+    color: #fff; /* Change the color when hovered */
+
+  }
+.nav{
+    font-size: 500;
+}
