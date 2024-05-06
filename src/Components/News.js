@@ -34,7 +34,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
  
      const fetchMoreData = async() => {
     // setPage(page+1);
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=a6a9e06bc773479a90978655d9e8d6ce&page=${page+1}&pageSize=${props.pagesize}`;
+    let url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=a6a9e06bc773479a90978655d9e8d6ce" ;
     setPage(page+1);
     setLoading(true);
     let data =  await fetch(url);
