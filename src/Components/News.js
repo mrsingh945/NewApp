@@ -17,14 +17,13 @@ import InfiniteScroll from "react-infinite-scroll-component";
   
   const updateNews = async()=>{ 
     props.setProgress(0);
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=a6a9e06bc773479a90978655d9e8d6ce&page=${page}&pageSize=${props.pagesize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=a6a9e06bc773479a90978655d9e8d6ce&page=${page}&pageSize=${props.pagesize}`;
     setLoading(true);
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
     setTotalResults(parsedData.totalResults);
     setLoading(false);
-   
     props.setProgress(100);
   }
  
@@ -34,7 +33,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
  
      const fetchMoreData = async() => {
     // setPage(page+1);
-    let url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=a6a9e06bc773479a90978655d9e8d6ce" ;
+    const url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=a6a9e06bc773479a90978655d9e8d6ce" ;
     setPage(page+1);
     setLoading(true);
     let data =  await fetch(url);
